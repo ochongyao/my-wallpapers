@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Colorful Background Gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f472b6" /> <!-- Pink -->
+      <stop offset="50%" stop-color="#a78bfa" /> <!-- Purple -->
+      <stop offset="100%" stop-color="#22d3ee" /> <!-- Cyan -->
+    </linearGradient>
+    
+    <!-- Drop Shadow for depth -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Vivid Background (Clean Gradient) -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  
+  <!-- The Glass Windows Logo -->
+  <g transform="translate(960, 540) translate(-105, -105)">
+    <!-- Glass Simulation: White fill with low opacity + White Stroke + Shadow -->
+    <g filter="url(#shadow)">
+        <rect x="0" y="0" width="100" height="100" fill="white" fill-opacity="0.25" stroke="white" stroke-width="1.5" rx="4" />
+        <rect x="110" y="0" width="100" height="100" fill="white" fill-opacity="0.25" stroke="white" stroke-width="1.5" rx="4" />
+        <rect x="0" y="110" width="100" height="100" fill="white" fill-opacity="0.25" stroke="white" stroke-width="1.5" rx="4" />
+        <rect x="110" y="110" width="100" height="100" fill="white" fill-opacity="0.25" stroke="white" stroke-width="1.5" rx="4" />
+    </g>
+  </g>
+</svg>

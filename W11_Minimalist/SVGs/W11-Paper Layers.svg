@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Soft Drop Shadow -->
+    <filter id="paperShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="15" stdDeviation="15" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Base Layer -->
+  <rect width="100%" height="100%" fill="#f3f4f6" />
+  
+  <!-- Abstract Background Sheets -->
+  <g filter="url(#paperShadow)">
+    <rect x="-100" y="0" width="800" height="1200" fill="#fff" transform="rotate(10)" />
+    <rect x="1400" y="-100" width="600" height="1200" fill="#fff" transform="rotate(-5)" />
+  </g>
+
+  <!-- The Logo (Floating Paper Squares) -->
+  <g transform="translate(960, 540) translate(-105, -105)">
+    <g filter="url(#paperShadow)">
+        <rect x="0" y="0" width="100" height="100" fill="#ffffff" rx="2" />
+        <rect x="110" y="0" width="100" height="100" fill="#ffffff" rx="2" />
+        <rect x="0" y="110" width="100" height="100" fill="#ffffff" rx="2" />
+        <rect x="110" y="110" width="100" height="100" fill="#ffffff" rx="2" />
+    </g>
+  </g>
+</svg>

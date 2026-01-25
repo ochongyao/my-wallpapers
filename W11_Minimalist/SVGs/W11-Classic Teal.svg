@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- The Classic Bevel Button -->
+    <g id="win95btn">
+      <!-- Main Face -->
+      <rect x="0" y="0" width="100" height="100" fill="#c0c0c0" />
+      <!-- Top Highlight (White) -->
+      <polygon points="0,0 100,0 98,2 2,2 2,98 0,100" fill="#ffffff" />
+      <!-- Bottom Shadow (Black) -->
+      <polygon points="100,100 0,100 2,98 98,98 98,2 100,0" fill="#000000" />
+      <!-- Inner Shadow (Dark Gray) -->
+      <polygon points="98,98 2,98 4,96 96,96 96,4 98,2" fill="#808080" />
+    </g>
+  </defs>
+
+  <!-- The Iconic Teal Background -->
+  <rect width="100%" height="100%" fill="#008080" />
+  
+  <!-- The Logo Group -->
+  <g transform="translate(960, 540) translate(-105, -105)">
+    <use href="#win95btn" x="0" y="0" />
+    <use href="#win95btn" x="110" y="0" />
+    <use href="#win95btn" x="0" y="110" />
+    <use href="#win95btn" x="110" y="110" />
+  </g>
+</svg>

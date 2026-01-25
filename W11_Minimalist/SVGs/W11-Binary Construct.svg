@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- The Mask Shape -->
+    <mask id="winMask">
+      <rect width="100%" height="100%" fill="black" />
+      <g transform="translate(960, 540) translate(-105, -105)">
+        <rect x="0" y="0" width="100" height="100" fill="white" />
+        <rect x="110" y="0" width="100" height="100" fill="white" />
+        <rect x="0" y="110" width="100" height="100" fill="white" />
+        <rect x="110" y="110" width="100" height="100" fill="white" />
+      </g>
+    </mask>
+    
+    <!-- Binary Pattern -->
+    <pattern id="binary" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <text x="10" y="20" font-family="monospace" fill="#00ff41" font-size="14" opacity="0.8">
+        10110100110101001011010011010100
+        01001011010101100100101101010110
+        11010100101101011101010010110101
+        00110101001011010011010100101101
+        10100101101010111010010110101011
+        01010110010010110101011001001011
+        11010010110101001101001011010100
+        00101101010110100010110101011010
+        10110100110101001011010011010100
+        01001011010101100100101101010110
+      </text>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#000" />
+  
+  <!-- Faint Background Code (Low Opacity) -->
+  <rect width="100%" height="100%" fill="url(#binary)" opacity="0.1" />
+  
+  <!-- Masked Bright Code (The Logo) -->
+  <rect width="100%" height="100%" fill="url(#binary)" mask="url(#winMask)" />
+  
+  <!-- Glow Effect -->
+  <g transform="translate(960, 540) translate(-105, -105)" filter="blur(15px)" opacity="0.5">
+     <rect x="0" y="0" width="210" height="210" fill="#00ff41" />
+  </g>
+</svg>

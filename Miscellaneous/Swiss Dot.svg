@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <pattern id="dotGrid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="30" cy="30" r="2" fill="#cbd5e1" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  
+  <!-- The Grid -->
+  <rect width="100%" height="100%" fill="url(#dotGrid)" />
+  
+  <!-- The Accent Dot (The Anomaly) -->
+  <!-- Aligned to the grid (multiples of 60 + 30 offset) -->
+  <circle cx="990" cy="570" r="6" fill="#ef4444" />
+  
+  <!-- Optional: A subtle line connecting to the dot -->
+  <line x1="990" y1="570" x2="990" y2="1080" stroke="#ef4444" stroke-width="1" opacity="0.2" />
+</svg>

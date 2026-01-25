@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1" height="2" fill="#000" opacity="0.5"/>
+    </pattern>
+    
+    <!-- Glitch Filter -->
+    <filter id="glitch">
+      <feTurbulence type="turbulence" baseFrequency="0.01 0.005" numOctaves="2" result="turbulence"/>
+      <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- CRT Black Background -->
+  <rect width="100%" height="100%" fill="#000" />
+  
+  <!-- Main Content Group -->
+  <g font-family="monospace" fill="#00ff41">
+    <!-- Large Background Text -->
+    <text x="50%" y="50%" font-size="400" text-anchor="middle" opacity="0.05" font-weight="bold">ERROR</text>
+    
+    <!-- Terminal Text -->
+    <text x="100" y="100" font-size="24">> SYSTEM_BOOT_SEQUENCE_INIT</text>
+    <text x="100" y="140" font-size="24">> CHECKING_MEMORY... OK</text>
+    <text x="100" y="180" font-size="24">> LOADING_KERNEL... OK</text>
+    <text x="100" y="220" font-size="24">> MOUNTING_VOLUMES... FAILED</text>
+    
+    <!-- Glitched Box -->
+    <rect x="800" y="400" width="320" height="200" fill="none" stroke="#00ff41" stroke-width="4" filter="url(#glitch)" />
+    <text x="960" y="510" font-size="40" text-anchor="middle" filter="url(#glitch)">NO SIGNAL</text>
+  </g>
+
+  <!-- Screen Glow -->
+  <radialGradient id="crtGlow">
+    <stop offset="0%" stop-color="#00ff41" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.8"/>
+  </radialGradient>
+  <rect width="100%" height="100%" fill="url(#crtGlow)" />
+
+  <!-- Scanlines Overlay -->
+  <rect width="100%" height="100%" fill="url(#scanlines)" pointer-events="none"/>
+</svg>

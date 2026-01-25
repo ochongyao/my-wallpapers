@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#020617" />
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.3" />
+
+  <!-- Circuit Lines -->
+  <g stroke-width="3" fill="none" filter="url(#neonGlow)" stroke-linecap="round">
+    <!-- Cyan Path -->
+    <path d="M100,1080 V800 L300,600 H500 L600,500 V200" stroke="#06b6d4" />
+    <circle cx="600" cy="200" r="6" fill="#06b6d4" stroke="none" />
+    
+    <!-- Magenta Path -->
+    <path d="M1920,300 H1600 L1400,500 V800 L1200,1000" stroke="#d946ef" />
+    <circle cx="1200" cy="1000" r="6" fill="#d946ef" stroke="none" />
+    
+    <!-- Green Path -->
+    <path d="M0,400 H200 L400,200 V50" stroke="#10b981" />
+    <circle cx="400" cy="50" r="6" fill="#10b981" stroke="none" />
+    
+    <!-- Yellow Path (Center Complex) -->
+    <path d="M960,1080 V900 L1100,700 H1300" stroke="#f59e0b" />
+    <circle cx="1300" cy="700" r="6" fill="#f59e0b" stroke="none" />
+  </g>
+  
+  <!-- Floating Particles -->
+  <circle cx="300" cy="600" r="3" fill="#fff" opacity="0.5" />
+  <circle cx="1600" cy="300" r="3" fill="#fff" opacity="0.5" />
+  <circle cx="1100" cy="700" r="3" fill="#fff" opacity="0.5" />
+</svg>

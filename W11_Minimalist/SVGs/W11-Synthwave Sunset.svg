@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e0249" />
+      <stop offset="100%" stop-color="#570a57" />
+    </linearGradient>
+    
+    <linearGradient id="sunGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#facc15" /> <!-- Yellow -->
+      <stop offset="100%" stop-color="#f43f5e" /> <!-- Red -->
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="100%" height="100%" fill="url(#sky)" />
+
+  <!-- The "Sun" (Windows Logo) -->
+  <g transform="translate(960, 540) translate(-105, -150)" filter="url(#glow)">
+    <rect x="0" y="0" width="100" height="100" fill="url(#sunGrad)" />
+    <rect x="110" y="0" width="100" height="100" fill="url(#sunGrad)" />
+    <rect x="0" y="110" width="100" height="100" fill="url(#sunGrad)" />
+    <rect x="110" y="110" width="100" height="100" fill="url(#sunGrad)" />
+  </g>
+  
+  <!-- The Grid Floor -->
+  <g transform="translate(0, 600)">
+    <rect width="1920" height="480" fill="#1a0b2e" />
+    <g stroke="#f43f5e" stroke-width="2" opacity="0.5">
+        <!-- Horizontal Lines -->
+        <line x1="0" y1="0" x2="1920" y2="0" />
+        <line x1="0" y1="50" x2="1920" y2="50" />
+        <line x1="0" y1="120" x2="1920" y2="120" />
+        <line x1="0" y1="220" x2="1920" y2="220" />
+        <line x1="0" y1="350" x2="1920" y2="350" />
+        
+        <!-- Perspective Lines -->
+        <line x1="960" y1="0" x2="0" y2="480" />
+        <line x1="960" y1="0" x2="400" y2="480" />
+        <line x1="960" y1="0" x2="800" y2="480" />
+        <line x1="960" y1="0" x2="1120" y2="480" />
+        <line x1="960" y1="0" x2="1520" y2="480" />
+        <line x1="960" y1="0" x2="1920" y2="480" />
+    </g>
+  </g>
+</svg>

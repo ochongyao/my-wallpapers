@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15360 8640" preserveAspectRatio="xMidYMid slice">
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cursor {
+      animation: blink 1.5s infinite steps(1);
+    }
+  </style>
+
+  <rect width="100%" height="100%" fill="#000000" />
+
+  <path d="M7040,4160 L7200,4320 L7040,4480" 
+        fill="none" 
+        stroke="#89b4fa" 
+        stroke-width="32" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+
+  <rect x="7360" y="4120" width="120" height="400" fill="#f38ba8" class="cursor" />
+</svg>

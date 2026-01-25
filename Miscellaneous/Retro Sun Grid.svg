@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#240046" />
+      <stop offset="100%" stop-color="#10002b" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9e00" />
+      <stop offset="100%" stop-color="#ff0054" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)" />
+
+  <!-- The Sun -->
+  <circle cx="960" cy="600" r="300" fill="url(#sunGrad)" filter="url(#glow)" />
+  
+  <!-- Sun Cuts (Stripes) -->
+  <g fill="#10002b">
+    <rect x="600" y="650" width="720" height="10" />
+    <rect x="600" y="680" width="720" height="20" />
+    <rect x="600" y="720" width="720" height="30" />
+    <rect x="600" y="770" width="720" height="40" />
+    <rect x="600" y="830" width="720" height="50" />
+  </g>
+
+  <!-- Ground Grid -->
+  <path d="M0 600 L1920 600 L1920 1080 L0 1080 Z" fill="#240046" opacity="0.8" />
+  <g stroke="#ff0054" stroke-width="2" opacity="0.5">
+    <!-- Horizontal Lines -->
+    <line x1="0" y1="650" x2="1920" y2="650" />
+    <line x1="0" y1="750" x2="1920" y2="750" />
+    <line x1="0" y1="900" x2="1920" y2="900" />
+    <line x1="0" y1="1080" x2="1920" y2="1080" />
+    
+    <!-- Perspective Lines -->
+    <line x1="960" y1="600" x2="-500" y2="1080" />
+    <line x1="960" y1="600" x2="200" y2="1080" />
+    <line x1="960" y1="600" x2="600" y2="1080" />
+    <line x1="960" y1="600" x2="1320" y2="1080" />
+    <line x1="960" y1="600" x2="1720" y2="1080" />
+    <line x1="960" y1="600" x2="2420" y2="1080" />
+  </g>
+</svg>

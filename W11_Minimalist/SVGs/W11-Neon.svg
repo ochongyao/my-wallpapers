@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#111" />
+  
+  <!-- The Logo -->
+  <g transform="translate(960, 540) translate(-105, -105)" 
+     fill="none" 
+     stroke="#06b6d4" 
+     stroke-width="4" 
+     filter="url(#neon)">
+     
+    <rect x="0" y="0" width="100" height="100" />
+    <rect x="110" y="0" width="100" height="100" />
+    <rect x="0" y="110" width="100" height="100" />
+    <rect x="110" y="110" width="100" height="100" />
+  </g>
+</svg>

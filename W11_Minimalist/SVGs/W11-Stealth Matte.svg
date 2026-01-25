@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Metallic Gradient for the Logo -->
+    <linearGradient id="metalGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#262626" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </linearGradient>
+    
+    <!-- Noise Texture for the background -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.05 0"/>
+    </filter>
+    
+    <!-- Drop Shadow -->
+    <filter id="dropShadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Matte Black Background -->
+  <rect width="100%" height="100%" fill="#111111" />
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.5"/>
+  
+  <!-- The Logo -->
+  <g transform="translate(960, 540) translate(-105, -105)">
+    <!-- We add a thin stroke to catch the "light" on the edges -->
+    <g stroke="#333" stroke-width="1" filter="url(#dropShadow)">
+        <rect x="0" y="0" width="100" height="100" fill="url(#metalGrad)" rx="2" />
+        <rect x="110" y="0" width="100" height="100" fill="url(#metalGrad)" rx="2" />
+        <rect x="0" y="110" width="100" height="100" fill="url(#metalGrad)" rx="2" />
+        <rect x="110" y="110" width="100" height="100" fill="url(#metalGrad)" rx="2" />
+    </g>
+    
+    <!-- Highlight (Top Left Edge) -->
+    <path d="M2,100 L2,2 L100,2" fill="none" stroke="#555" stroke-width="2" opacity="0.5" />
+    <path d="M112,100 L112,2 L210,2" fill="none" stroke="#555" stroke-width="2" opacity="0.5" />
+    <path d="M2,210 L2,112 L100,112" fill="none" stroke="#555" stroke-width="2" opacity="0.5" />
+    <path d="M112,210 L112,112 L210,112" fill="none" stroke="#555" stroke-width="2" opacity="0.5" />
+  </g>
+</svg>

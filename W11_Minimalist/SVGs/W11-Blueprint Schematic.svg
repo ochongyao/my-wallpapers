@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- Blueprint Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Blueprint Blue Background -->
+  <rect width="100%" height="100%" fill="#003366" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- The Logo Schematic -->
+  <g transform="translate(960, 540) translate(-105, -105)">
+    <!-- The Squares (Dashed Outline) -->
+    <g fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="5,5">
+        <rect x="0" y="0" width="100" height="100" />
+        <rect x="110" y="0" width="100" height="100" />
+        <rect x="0" y="110" width="100" height="100" />
+        <rect x="110" y="110" width="100" height="100" />
+    </g>
+    
+    <!-- Center Crosshair -->
+    <line x1="105" y1="-50" x2="105" y2="260" stroke="#fff" stroke-width="1" opacity="0.5" />
+    <line x1="-50" y1="105" x2="260" y2="105" stroke="#fff" stroke-width="1" opacity="0.5" />
+    
+    <!-- Measurements -->
+    <g stroke="#fff" stroke-width="1" opacity="0.8">
+        <!-- Width Measurement -->
+        <line x1="0" y1="-20" x2="100" y2="-20" />
+        <line x1="0" y1="-25" x2="0" y2="-15" />
+        <line x1="100" y1="-25" x2="100" y2="-15" />
+        <text x="50" y="-30" fill="#fff" font-family="monospace" font-size="12" text-anchor="middle">100px</text>
+        
+        <!-- Gap Measurement -->
+        <line x1="100" y1="-20" x2="110" y2="-20" />
+        <text x="105" y="-30" fill="#fff" font-family="monospace" font-size="10" text-anchor="middle">10</text>
+    </g>
+    
+    <!-- Technical Label -->
+    <rect x="160" y="200" width="120" height="60" fill="#003366" stroke="#fff" stroke-width="2" />
+    <text x="170" y="220" fill="#fff" font-family="monospace" font-size="10">FIG 11.0</text>
+    <text x="170" y="240" fill="#fff" font-family="monospace" font-size="10">OS_WIN_11</text>
+    <text x="170" y="255" fill="#fff" font-family="monospace" font-size="8" opacity="0.7">SCALE 1:1</text>
+  </g>
+</svg>

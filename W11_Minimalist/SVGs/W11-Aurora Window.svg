@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- FIXED: Hardcoded coordinates so the clip mask is always in the center -->
+    <!-- Center (960, 540) minus Offset (105) = Start (855, 435) -->
+    <clipPath id="winClip">
+        <rect x="855" y="435" width="100" height="100" rx="4" /> <!-- Top Left -->
+        <rect x="965" y="435" width="100" height="100" rx="4" /> <!-- Top Right -->
+        <rect x="855" y="545" width="100" height="100" rx="4" /> <!-- Bottom Left -->
+        <rect x="965" y="545" width="100" height="100" rx="4" /> <!-- Bottom Right -->
+    </clipPath>
+    
+    <!-- The Fluid Gradient -->
+    <filter id="fluidBlur">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+
+  <!-- Dark Background -->
+  <rect width="100%" height="100%" fill="#000000" />
+  
+  <!-- The Aurora (Clipped inside the logo) -->
+  <g clip-path="url(#winClip)">
+    <!-- We fill the whole screen with the dark blue base first -->
+    <rect width="1920" height="1080" fill="#1e1b4b" /> 
+    
+    <!-- The colorful blobs -->
+    <g filter="url(#fluidBlur)">
+      <circle cx="900" cy="500" r="150" fill="#4f46e5" /> <!-- Indigo -->
+      <circle cx="1050" cy="550" r="120" fill="#ec4899" /> <!-- Pink -->
+      <circle cx="960" cy="600" r="100" fill="#06b6d4" /> <!-- Cyan -->
+      <circle cx="920" cy="480" r="80" fill="#facc15" /> <!-- Yellow Pop -->
+    </g>
+  </g>
+  
+  <!-- Subtle Border to define edges (This sits on top of the clip) -->
+  <g transform="translate(960, 540) translate(-105, -105)" fill="none" stroke="#ffffff" stroke-width="2">
+    <rect x="0" y="0" width="100" height="100" rx="4" />
+    <rect x="110" y="0" width="100" height="100" rx="4" />
+    <rect x="0" y="110" width="100" height="100" rx="4" />
+    <rect x="110" y="110" width="100" height="100" rx="4" />
+  </g>
+</svg>

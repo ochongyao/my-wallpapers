@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- The Diagonal Line Pattern -->
+    <pattern id="hatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="10" style="stroke:#fff; stroke-width:2" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Black Background -->
+  <rect width="100%" height="100%" fill="#000000" />
+  
+  <!-- The Windows 11 Grid -->
+  <g transform="translate(960, 540) translate(-105, -105)">
+    <!-- Top Left -->
+    <rect x="0" y="0" width="100" height="100" fill="url(#hatch)" />
+    <!-- Top Right -->
+    <rect x="110" y="0" width="100" height="100" fill="url(#hatch)" />
+    <!-- Bottom Left -->
+    <rect x="0" y="110" width="100" height="100" fill="url(#hatch)" />
+    <!-- Bottom Right -->
+    <rect x="110" y="110" width="100" height="100" fill="url(#hatch)" />
+  </g>
+</svg>

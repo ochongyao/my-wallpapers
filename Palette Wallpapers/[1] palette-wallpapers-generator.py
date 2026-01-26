@@ -136,10 +136,6 @@ def main():
     h_str = input("Enter Height (default 4320): ")
     w = int(w_str) if w_str.strip() else 10080
     h = int(h_str) if h_str.strip() else 4320
-    
-    output_dir = "generated_wallpapers"
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
 
     print(f"\nTarget Resolution: {w}x{h}")
     print(f"Palettes: {len(PALETTES)} | Variations: 2 (Dark_OLED/Light)")
@@ -163,7 +159,7 @@ def main():
                 img = generate_design(w, h, palette, bg, super_sample=2)
                 
                 # Save
-                filename = f"{output_dir}/{name}_{mode_name}_{w}x{h}.png"
+                filename = f"{name}_{mode_name}_{w}x{h}.png"
                 img.save(filename, compress_level=1)
                 print(f"    Saved: {filename}")
                 
@@ -171,7 +167,7 @@ def main():
                 print("    ERROR: Out of Memory. Try super_sample=1.")
 
     print("-" * 50)
-    print(f"Done! Check the '{output_dir}' folder.")
+    print("Done!")
 
 if __name__ == "__main__":
     main()
